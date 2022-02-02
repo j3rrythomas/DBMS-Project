@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.7'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+//    implementation 'io.github.palexdev:materialfx:11.13.0'
+    implementation 'mysql:mysql-connector-java:8.0.28'
+//    implementation 'org.postgresql:postgresql:42.3.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+javafx {
+    version = "12"
+    modules = [ 'javafx.controls','javafx.fxml' ]
+}
+
+mainClassName='EMeter.Main'
