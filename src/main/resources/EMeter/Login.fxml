@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane fx:controller="EMeter.LoginController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <AnchorPane style="-fx-background-color: #7054F0;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="titleLabel" alignment="CENTER" layoutX="3.0" layoutY="200.0" prefHeight="54.0" prefWidth="223.0" snapToPixel="false" style="-fx-background-color: #7054F0;" text="E-Meter" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="loginLabel" layoutX="174.0" layoutY="90.0" prefHeight="31.0" prefWidth="66.0" text="Login">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="errorLabel" alignment="CENTER" layoutX="139.0" layoutY="159.0" prefHeight="21.0" prefWidth="170.0" />
+            <Label fx:id="emailLabel" layoutX="42.0" layoutY="214.0" prefHeight="15.0" prefWidth="44.0" text="Email" />
+            <Label fx:id="passwordLabel" layoutX="42.0" layoutY="253.0" text="Password"  />
+            <TextField fx:id="emailInput" layoutX="139.0" layoutY="209.0" prefWidth="200.0"/>
+            <PasswordField fx:id="passwordInput" layoutX="139.0" layoutY="248.0" prefWidth="200.0" />
+            <Button fx:id="loginButton" layoutX="139.0" layoutY="312.0" mnemonicParsing="false" onAction="#login" text="Login" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

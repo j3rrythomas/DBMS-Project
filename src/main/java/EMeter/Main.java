@@ -23,8 +23,8 @@ public class Main extends Application {
 //        stage.setScene(scene);
 //        stage.show();
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
-            stage.setTitle("Sample");
+            Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+            stage.setTitle("E-Meter");
             stage.setScene(new Scene(root,640,480));
             stage.show();
         }catch(IOException e){
