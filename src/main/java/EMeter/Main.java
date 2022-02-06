@@ -10,18 +10,15 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.Connection;
 
 public class Main extends Application {
 
+    protected static Connection con;
     @Override
     public void start(Stage stage) {
-//        String javaVersion = System.getProperty("java.version");
-//        String javafxVersion = System.getProperty("javafx.version");
-//        Label l = new Label("Hello, user");
-////        Button b = new Button("Login");
-//        Scene scene = new Scene(new StackPane(l), 640, 480);
-//        stage.setScene(scene);
-//        stage.show();
+        JDBC jdbc = new JDBC();
+        con = jdbc.getConnection();
         try {
             Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
             stage.setTitle("E-Meter");
