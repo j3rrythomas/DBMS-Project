@@ -8,7 +8,7 @@ public class JDBC {
     private Connection connection;
     public Connection getConnection(){
         String dbName="EMeter";
-        String dbUrl="jdbc:mysql://localhost:3306/"+dbName;
+        String dbUrl="jdbc:mysql://localhost:3307/"+dbName;
         String userName="root";
         String password="";
         try {

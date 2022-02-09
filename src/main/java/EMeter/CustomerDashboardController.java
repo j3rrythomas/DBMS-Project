@@ -79,9 +79,6 @@ public class CustomerDashboardController implements Initializable {
             while (rs.next()) {
                 obtab.add(new MeterTable(rs.getString("month"),rs.getInt("meterid"),rs.getDouble("current"),rs.getInt("year"),getDues(rs.getDouble("current"))));
             }
-            for(MeterTable i:obtab){
-                System.out.println(i.month+","+i.dues+","+i.meterNumber+","+i.year+","+i.usage);
-            }
             meterTable.setItems(obtab);
                 }
 
@@ -102,6 +99,11 @@ public class CustomerDashboardController implements Initializable {
         return dues;
     }
 
-    public void generateBill(ActionEvent actionEvent) {
+    public void generateBill(ActionEvent actionEvent) throws IOException {
+        Parent root;
+        Stage appStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        root = FXMLLoader.load(getClass().getResource("GenerateBill.fxml"));
+        appStage.setScene(new Scene(root,640,480));
+        appStage.show();
     }
 }
